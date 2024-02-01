@@ -9,7 +9,7 @@ public class SpellChecker {
 		String correction = spellChecker(word, threshold, dictionary);
 		System.out.println(correction);
 		System.out.println(tail (word));
-		System.out.println (levenshtein("love","i"));
+		System.out.println (levenshtein("SPELL","spell"));
 	}
 
 	public static String tail(String str)
@@ -30,7 +30,8 @@ public class SpellChecker {
 	}
 
 	public static int levenshtein(String word1, String word2)
-	{
+	{ word1 = word1.toLowerCase();
+		word2 = word2.toLowerCase();
 
 		if (word1 == null)
 			return (word2 !=null ? word2.length() : 0 );
