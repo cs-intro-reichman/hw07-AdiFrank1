@@ -96,7 +96,7 @@ public class SpellChecker {
 			}
 		}
 
-			if (!fits.isEmpty() )
+			if (!fits.isEmpty() && minMatch <= threshold)
 			{
 				return fits;
 			} 
